@@ -3,34 +3,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_inicio">
 
     <fragment
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_inicio"
         android:name="com.example.fnsf_maps.ui.inicio.InicioFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:label="@string/title_inicio"
+        tools:layout="@layout/fragment_inicio" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_contactos"
         android:name="com.example.fnsf_maps.ui.contactos.ContactosFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:label="@string/title_contactos"
+        tools:layout="@layout/fragment_contactos" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_mapa"
         android:name="com.example.fnsf_maps.ui.mapa.MapaFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:label="@string/title_mapa"
+        tools:layout="@layout/fragment_mapa" />
     <fragment
         android:id="@+id/navigation_informacoes"
-        android:name="com.example.fnsf_maps.ui.Informacoes"
+        android:name="com.example.fnsf_maps.ui.informacoes.InformacoesFragment"
         android:label="@string/title_informacoes"
         tools:layout="@layout/fragment_informacoes" />
 
     <fragment
         android:id="@+id/navigation_definicoes"
-        android:name="com.example.fnsf_maps.ui.Definicoes"
+        android:name="com.example.fnsf_maps.ui.definicoes.DefinicoesFragment"
         android:label="@string/title_definicoes"
         tools:layout="@layout/fragment_definicoes" />
 </navigation>

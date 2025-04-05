@@ -1,22 +1,23 @@
 package com.example.fnsf_maps.ui.mapa
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.webkit.WebView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.fnsf_maps.databinding.FragmentNotificationsBinding
+import com.example.fnsf_maps.databinding.FragmentMapaBinding
+import com.example.fnsf_maps.R
 
 class MapaFragment : Fragment() {
 
-    private var _binding: FragmentNotificationsBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+    private var _binding: FragmentMapaBinding? = null
     private val binding get() = _binding!!
+    private lateinit var mapWebView: WebView // Add WebView
 
+    @SuppressLint("SetJavaScriptEnabled")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -25,13 +26,15 @@ class MapaFragment : Fragment() {
         val mapaViewModel =
             ViewModelProvider(this).get(MapaViewModel::class.java)
 
-        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+        _binding = FragmentMapaBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        mapaViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+        // Assuming you have a WebView in your fragment_mapa.xml with id "mapWebView"
+        mapWebView = binding.root.findViewById(R.id.mapWebView) // Initialize WebView
+
+        mapWebView.settings.javaScriptEnabled = true
+        mapWebView.loadUrl("https://luisr091.github.io/Map_App---JFNSF/")  // Load the HTML
+
         return root
     }
 

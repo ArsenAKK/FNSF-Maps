@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">FNSF-Maps</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_inicio">Início</string>
+    <string name="title_contactos">Contactos</string>
+    <string name="title_mapa">Mapa</string>
     <string name="title_informacoes">Informações</string>
     <string name="title_definicoes">Definições</string>
 </resources>
