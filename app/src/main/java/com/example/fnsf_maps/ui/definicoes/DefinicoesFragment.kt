@@ -19,16 +19,7 @@ class DefinicoesFragment : Fragment() {
         _binding = FragmentDefinicoesBinding.inflate(inflater, container, false)
         return binding.root
     }
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        val activity = requireActivity() as AppCompatActivity
-        val actionBar = activity.supportActionBar
-        actionBar?.apply {
-            title = "Definições"  // Set your desired title
-            setDisplayHomeAsUpEnabled(false) // If you want a back button
-            // Add any other ActionBar customizations here
-        }
-    }
+
     override fun onOptionsItemSelected(item: android.view.MenuItem): Boolean {
         return when (item.itemId) {
             android.R.id.home -> {
