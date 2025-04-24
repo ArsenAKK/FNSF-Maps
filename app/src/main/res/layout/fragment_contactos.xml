@@ -7,16 +7,110 @@
     tools:context=".ui.contactos.ContactosFragment">
 
     <TextView
-        android:id="@+id/text_dashboard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/my_text_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/TitleFragment"
+        />
+
+    <View
+        android:id="@+id/View"
+        style="@style/HorizontalLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_text_view"
+        app:layout_constraintBottom_toTopOf="@+id/cardView1" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView1"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/View"
+        style="@style/ContactoCardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/titleTextView1"
+                style="@style/ContactoTitle"
+                android:text="Sede da Freguesia"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                style="@style/ContactoLinearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleTextView1">
+
+                <TextView
+                    android:id="@+id/phoneTextView1"
+                    android:autoLink="phone"
+                    android:text="249 726 036"
+                    app:drawableLeftCompat="@drawable/phone_call_small"
+                    style="@style/ContactoEmailPhone"/>
+
+                <TextView
+                    android:id="@+id/emailTextView1"
+                    android:layout_marginTop="16dp"
+                    android:autoLink="email"
+                    android:text="geral@jfnsfatima.pt"
+                    app:drawableLeftCompat="@drawable/email_small"
+                    style="@style/ContactoEmailPhone" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardView1"
+        style="@style/ContactoCardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/titleTextView2"
+                style="@style/ContactoTitle"
+                android:text="Câmara Municipal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                style="@style/ContactoLinearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleTextView2">
+
+                <TextView
+                    android:id="@+id/phoneTextView2"
+                    android:autoLink="phone"
+                    android:text="249 720 400"
+                    app:drawableLeftCompat="@drawable/phone_call_small"
+                    style="@style/ContactoEmailPhone"/>
+
+                <TextView
+                    android:id="@+id/emailTextView2"
+                    android:layout_marginTop="16dp"
+                    android:autoLink="email"
+                    android:text="geral@cm-entroncamento.pt"
+                    app:drawableLeftCompat="@drawable/email_small"
+                    style="@style/ContactoEmailPhone" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

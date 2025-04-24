@@ -1,9 +1,10 @@
 package com.example.fnsf_maps
 
 import android.os.Bundle
+import android.view.Menu
+import android.widget.ImageView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.navigation.findNavController
@@ -40,5 +41,23 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
     }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+
+        val item = menu.findItem(R.id.action_image)
+        val actionView = item?.actionView
+        val imageView = actionView?.findViewById<ImageView>(R.id.imageView)
+
+        // You can add an OnClickListener to the ImageView if needed
+        imageView?.setOnClickListener {
+            // Handle click on the action bar image, e.g., navigate to a new screen
+        }
+
+        return true
+    }
+
+
 }

@@ -12,27 +12,14 @@ import com.example.fnsf_maps.databinding.FragmentInicioBinding
 class InicioFragment : Fragment() {
 
     private var _binding: FragmentInicioBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val inicioViewModel =
-            ViewModelProvider(this).get(InicioViewModel::class.java)
-
         _binding = FragmentInicioBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.textHome
-        inicioViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
+        return binding.root
     }
 
     override fun onDestroyView() {

@@ -28,10 +28,11 @@ class ContactosFragment : Fragment() {
         _binding = FragmentContactosBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
-        contactosViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+        // Access the TextView using View Binding
+        val myTextView: TextView = binding.myTextView
+        myTextView.text = "Contactos"
+
+
         return root
     }
 

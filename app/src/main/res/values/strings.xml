@@ -5,4 +5,61 @@
     <string name="title_mapa">Mapa</string>
     <string name="title_informacoes">Informações</string>
     <string name="title_definicoes">Definições</string>
+
+    <!-- Location names -->
+    <string name="junta">Sede da Freguesia</string>
+    <string name="segurancasocial">Segurança Social</string>
+    <string name="camara">Sede de Concelho</string>
+
+    <string name="centrodesaude">Centro de Saúde</string>
+    <string name="farmaciagoncalves">Farmácia Almeida Gonçalves</string>
+    <string name="farmaciadaterra">Farmácia da Terra</string>
+
+    <string name="eleclerc">E.Leclerc</string>
+    <string name="aldi">Aldi</string>
+    <string name="bricomarche">Bricomarché</string>
+    <string name="lidl">Lidl</string>
+    <string name="pindodoce">Pindo Doce</string>
+
+    <string name="jardimlocomotiva">Largo do Centro de Convívio da 3ª Idade</string>
+    <string name="jardimLCE">Largo das Comunidades Europeias</string>
+    <string name="bonito">Parque Verde do Bonito</string>
+    <string name="jardimjose">Jardim José Afonso</string>
+
+    <string name="parqueradical">Parque Radical</string>
+    <string name="piscinas">Piscinas Municipais</string>
+    <string name="complexodesportivo">Complexo Desportivo do Bonito</string>
+    <string name="pavilhao">Pavilhão Desportivo Municipal</string>
+    <string name="campoazul">Largo Casal do Saldanha</string>
+
+    <string name="escolasecundaria">Escola Secundária do Entroncamento</string>
+    <string name="colegioandrade">Colégio Andrade Corvo</string>
+    <string name="escolabonito">Escola Básica do Bonito</string>
+    <string name="universidadesenior">Universidade Senior</string>
+    <string name="afc">Associação Filarmónica e Cultutal</string>
+    <string name="eser">Escola de Segurança e Educação Rodoviária</string>
+
+    <string name="trincanela">Bonito by Tricanela</string>
+
+    <string name="largomes">Lar Fernando Eiró Gomes</string>
+    <string name="larferroviario">Associação dos Lares Ferroviários</string>
+
+    <string name="museuferroviario">Museu Nacional Ferroviário</string>
+
+    <string name="paroquia">Paróquia de Nª Srª de Fátima</string>
+
+    <!-- Location categories -->
+    <string name="edifInst">Edifícios Institucionais</string>
+    <string name="saude">Saúde</string>
+    <string name="zonascomercio">Zonas de Comércio</string>
+    <string name="parques">Parques / Jardins</string>
+    <string name="desporto">Desporto / Atividade Física</string>
+    <string name="escolas">Escolas</string>
+    <string name="restaurantes">Restaurantes</string>
+    <string name="lares">Lares</string>
+    <string name="museu">Museu</string>
+    <string name="zonaindustrial">Zona Industrial</string>
+    <string name="regimento">Regimento de Manutenção Militar</string>
+    <string name="parquenegocios">Parque de Negócios</string>
+    <string name="igrejas">Igrejas</string>
 </resources>
