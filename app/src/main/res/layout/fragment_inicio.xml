@@ -1,838 +1,895 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true">
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="100dp"
-    tools:context=".ui.inicio.InicioFragment">
+    android:orientation="vertical">
 
-    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+    <!-- Your new LinearLayout outside the ScrollView -->
     <LinearLayout
-        android:id="@+id/horizontalScrollView1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        style="@style/LinearLayoutScroll">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/azul_700">
 
-        <TextView
-            android:text="@string/edifInst"
-            style="@style/LinearLayoutTitle"/>
+        <!-- First child LinearLayout -->
+        <LinearLayout
+            android:id="@+id/layout_localidades"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"> <!-- Added gravity to center text -->
+            <!-- Add content for the first child LinearLayout here -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Localidades"/>
+            <!-- Add content for the first child LinearLayout here -->
+        </LinearLayout>
 
-        <HorizontalScrollView
-            style="@style/HorizontalScrollView">
-
-            <LinearLayout
-                style="@style/LinearLayoutImagens">
-
-                <LinearLayout
-                    style="@style/ImageLinearLayout">
-
-                    <ImageView
-                        android:src="@drawable/junta"
-                        android:contentDescription="Image 1"
-                        style="@style/ImageLayout"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
-
-                    <TextView
-                        android:text="@string/junta"
-                        style="@style/ImageCaptionText" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    style="@style/ImageLinearLayout">
-
-                    <ImageView
-                        android:src="@drawable/segurancasocial"
-                        android:contentDescription="Image 2"
-                        style="@style/ImageLayout"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
-
-                    <TextView
-                        android:text="@string/segurancasocial"
-                        style="@style/ImageCaptionText" />
-                </LinearLayout>
-
-                <LinearLayout
-                    style="@style/ImageLinearLayout">
-
-                    <ImageView
-                        android:src="@drawable/camara"
-                        android:contentDescription="Image 3"
-                        style="@style/ImageLayout"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
-
-                    <TextView
-                        android:text="@string/camara"
-                        style="@style/ImageCaptionText" />
-                </LinearLayout>
-            </LinearLayout>
-        </HorizontalScrollView>
+        <!-- Second child LinearLayout -->
+        <LinearLayout
+            android:id="@+id/layout_curiosidades"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"> <!-- Added gravity to center text -->
+            <!-- Add content for the first child LinearLayout here -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Curiosidades"/>
+            <!-- Add content for the second child LinearLayout here -->
+        </LinearLayout>
     </LinearLayout>
 
-    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-    <LinearLayout
-        android:id="@+id/horizontalScrollView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView1"
-        style="@style/LinearLayoutScroll">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-        <TextView
-            android:text="@string/saude"
-            style="@style/LinearLayoutTitle"/>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="100dp"
+        tools:context=".ui.inicio.InicioFragment">
 
-        <HorizontalScrollView
-            style="@style/HorizontalScrollView">
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <LinearLayout
+            android:id="@+id/horizontalScrollView1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/LinearLayoutScroll">
 
-            <LinearLayout
-                style="@style/LinearLayoutImagens">
+            <TextView
+                android:text="@string/edifInst"
+                style="@style/LinearLayoutTitle"/>
 
-                <LinearLayout
-                    style="@style/ImageLinearLayout">
-
-                    <ImageView
-                        android:src="@drawable/centrodesaude"
-                        android:contentDescription="Image 1"
-                        style="@style/ImageLayout"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
-
-                    <TextView
-                        android:text="@string/centrodesaude"
-                        style="@style/ImageCaptionText" />
-
-                </LinearLayout>
+            <HorizontalScrollView
+                style="@style/HorizontalScrollView">
 
                 <LinearLayout
-                    style="@style/ImageLinearLayout">
+                    style="@style/LinearLayoutImagens">
 
-                    <ImageView
-                        android:src="@drawable/farmaciagoncalves"
-                        android:contentDescription="Image 2"
-                        android:layout_width="260dp"
-                        style="@style/ImageLayout"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
 
-                    <TextView
-                        android:text="@string/farmaciagoncalves"
-                        style="@style/ImageCaptionText" />
+                        <ImageView
+                            android:src="@drawable/junta"
+                            android:contentDescription="Image 1"
+                            style="@style/ImageLayout"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/junta"
+                            style="@style/ImageCaptionText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
+
+                        <ImageView
+                            android:src="@drawable/segurancasocial"
+                            android:contentDescription="Image 2"
+                            style="@style/ImageLayout"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/segurancasocial"
+                            style="@style/ImageCaptionText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
+
+                        <ImageView
+                            android:src="@drawable/camara"
+                            android:contentDescription="Image 3"
+                            style="@style/ImageLayout"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/camara"
+                            style="@style/ImageCaptionText" />
+                    </LinearLayout>
                 </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <LinearLayout
+            android:id="@+id/horizontalScrollView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView1"
+            style="@style/LinearLayoutScroll">
+
+            <TextView
+                android:text="@string/saude"
+                style="@style/LinearLayoutTitle"/>
+
+            <HorizontalScrollView
+                style="@style/HorizontalScrollView">
 
                 <LinearLayout
-                    style="@style/ImageLinearLayout">
+                    style="@style/LinearLayoutImagens">
 
-                    <ImageView
-                        android:src="@drawable/farmaciadaterra"
-                        android:contentDescription="Image 3"
-                        style="@style/ImageLayout"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
 
-                    <TextView
-                        android:text="@string/farmaciadaterra"
-                        style="@style/ImageCaptionText" />
+                        <ImageView
+                            android:src="@drawable/centrodesaude"
+                            android:contentDescription="Image 1"
+                            style="@style/ImageLayout"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/centrodesaude"
+                            style="@style/ImageCaptionText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
+
+                        <ImageView
+                            android:src="@drawable/farmaciagoncalves"
+                            android:contentDescription="Image 2"
+                            android:layout_width="260dp"
+                            style="@style/ImageLayout"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/farmaciagoncalves"
+                            style="@style/ImageCaptionText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
+
+                        <ImageView
+                            android:src="@drawable/farmaciadaterra"
+                            android:contentDescription="Image 3"
+                            style="@style/ImageLayout"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/farmaciadaterra"
+                            style="@style/ImageCaptionText" />
+                    </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
-        </HorizontalScrollView>
-    </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
 
-    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-    <LinearLayout
-        android:id="@+id/horizontalScrollView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView2"
-        style="@style/LinearLayoutScroll">
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <LinearLayout
+            android:id="@+id/horizontalScrollView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView2"
+            style="@style/LinearLayoutScroll">
 
-        <TextView
-            android:text="@string/zonascomercio"
-            style="@style/LinearLayoutTitle"/>
+            <TextView
+                android:text="@string/zonascomercio"
+                style="@style/LinearLayoutTitle"/>
 
-        <HorizontalScrollView
-            style="@style/HorizontalScrollView">
-
-            <LinearLayout
-                style="@style/LinearLayoutImagens">
+            <HorizontalScrollView
+                style="@style/HorizontalScrollView">
 
                 <LinearLayout
-                    style="@style/ImageLinearLayout">
+                    style="@style/LinearLayoutImagens">
 
-                    <ImageView
-                        android:src="@drawable/eleclerc"
-                        android:contentDescription="Image 1"
-                        style="@style/ImageLayout"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
 
-                    <TextView
-                        android:text="@string/eleclerc"
-                        style="@style/ImageCaptionText" />
+                        <ImageView
+                            android:src="@drawable/eleclerc"
+                            android:contentDescription="Image 1"
+                            style="@style/ImageLayout"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
 
+                        <TextView
+                            android:text="@string/eleclerc"
+                            style="@style/ImageCaptionText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
+
+                        <ImageView
+                            android:src="@drawable/aldi"
+                            android:contentDescription="Image 2"
+                            style="@style/ImageLayout"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/aldi"
+                            style="@style/ImageCaptionText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
+
+                        <ImageView
+                            android:src="@drawable/brico"
+                            android:contentDescription="Image 3"
+                            style="@style/ImageLayout"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/bricomarche"
+                            style="@style/ImageCaptionText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
+
+                        <ImageView
+                            android:src="@drawable/lidl"
+                            android:contentDescription="Image 3"
+                            style="@style/ImageLayout"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/lidl"
+                            style="@style/ImageCaptionText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
+
+                        <ImageView
+                            android:src="@drawable/pingodoce"
+                            android:contentDescription="Image 3"
+                            style="@style/ImageLayout"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/pindodoce"
+                            style="@style/ImageCaptionText" />
+                    </LinearLayout>
                 </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <LinearLayout
+            android:id="@+id/horizontalScrollView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView3"
+            style="@style/LinearLayoutScroll">
+
+            <TextView
+                android:text="@string/parques"
+                style="@style/LinearLayoutTitle"/>
+
+            <HorizontalScrollView
+                style="@style/HorizontalScrollView">
 
                 <LinearLayout
-                    style="@style/ImageLinearLayout">
+                    style="@style/LinearLayoutImagens">
 
-                    <ImageView
-                        android:src="@drawable/aldi"
-                        android:contentDescription="Image 2"
-                        style="@style/ImageLayout"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
 
-                    <TextView
-                        android:text="@string/aldi"
-                        style="@style/ImageCaptionText" />
+                        <ImageView
+                            android:src="@drawable/jardimlocomotiva"
+                            android:contentDescription="Image 1"
+                            style="@style/ImageLayout"
+                            android:layout_width="370dp"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/jardimlocomotiva"
+                            style="@style/ImageCaptionText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
+
+                        <ImageView
+                            android:src="@drawable/bonito"
+                            android:contentDescription="Image 2"
+                            style="@style/ImageLayout"
+                            android:layout_width="260dp"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/bonito"
+                            style="@style/ImageCaptionText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
+
+                        <ImageView
+                            android:src="@drawable/jardimjose"
+                            android:contentDescription="Image 3"
+                            style="@style/ImageLayout"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/jardimjose"
+                            style="@style/ImageCaptionText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
+
+                        <ImageView
+                            android:src="@drawable/jardimpertodaescola"
+                            android:contentDescription="Image 3"
+                            style="@style/ImageLayout"
+                            android:layout_width="320dp"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/jardimLCE"
+                            style="@style/ImageCaptionText" />
+                    </LinearLayout>
                 </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <LinearLayout
+            android:id="@+id/horizontalScrollView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView4"
+            style="@style/LinearLayoutScroll">
+
+            <TextView
+                android:text="@string/desporto"
+                style="@style/LinearLayoutTitle"/>
+
+            <HorizontalScrollView
+                style="@style/HorizontalScrollView">
 
                 <LinearLayout
-                    style="@style/ImageLinearLayout">
+                    style="@style/LinearLayoutImagens">
 
-                    <ImageView
-                        android:src="@drawable/brico"
-                        android:contentDescription="Image 3"
-                        style="@style/ImageLayout"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
 
-                    <TextView
-                        android:text="@string/bricomarche"
-                        style="@style/ImageCaptionText" />
+                        <ImageView
+                            android:src="@drawable/radical"
+                            android:contentDescription="Image 1"
+                            style="@style/ImageLayout"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/parqueradical"
+                            style="@style/ImageCaptionText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
+
+                        <ImageView
+                            android:src="@drawable/piscinas"
+                            android:contentDescription="Image 2"
+                            style="@style/ImageLayout"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/piscinas"
+                            style="@style/ImageCaptionText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
+
+                        <ImageView
+                            android:src="@drawable/complexodesportivo"
+                            android:contentDescription="Image 3"
+                            style="@style/ImageLayout"
+                            android:layout_width="320dp"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/complexodesportivo"
+                            style="@style/ImageCaptionText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
+
+                        <ImageView
+                            android:src="@drawable/pavilhao"
+                            android:contentDescription="Image 3"
+                            style="@style/ImageLayout"
+                            android:layout_width="320dp"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/pavilhao"
+                            style="@style/ImageCaptionText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
+
+                        <ImageView
+                            android:src="@drawable/campoazul"
+                            android:contentDescription="Image 3"
+                            style="@style/ImageLayout"
+                            android:layout_width="300dp"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/campoazul"
+                            style="@style/ImageCaptionText" />
+                    </LinearLayout>
                 </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <LinearLayout
+            android:id="@+id/horizontalScrollView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView5"
+            style="@style/LinearLayoutScroll">
+
+            <TextView
+                android:text="@string/escolas"
+                style="@style/LinearLayoutTitle"/>
+
+            <HorizontalScrollView
+                style="@style/HorizontalScrollView">
 
                 <LinearLayout
-                    style="@style/ImageLinearLayout">
+                    style="@style/LinearLayoutImagens">
 
-                    <ImageView
-                        android:src="@drawable/lidl"
-                        android:contentDescription="Image 3"
-                        style="@style/ImageLayout"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
 
-                    <TextView
-                        android:text="@string/lidl"
-                        style="@style/ImageCaptionText" />
+                        <ImageView
+                            android:src="@drawable/secundaria"
+                            android:contentDescription="Image 1"
+                            style="@style/ImageLayout"
+                            android:layout_width="390dp"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/escolasecundaria"
+                            style="@style/ImageCaptionText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
+
+                        <ImageView
+                            android:src="@drawable/colegioandrade"
+                            android:contentDescription="Image 2"
+                            style="@style/ImageLayout"
+                            android:layout_width="260dp"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/colegioandrade"
+                            style="@style/ImageCaptionText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
+
+                        <ImageView
+                            android:src="@drawable/escoladobonito"
+                            android:contentDescription="Image 3"
+                            style="@style/ImageLayout"
+                            android:layout_width="260dp"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/escolabonito"
+                            style="@style/ImageCaptionText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
+
+                        <ImageView
+                            android:src="@drawable/universidadesenior"
+                            android:contentDescription="Image 3"
+                            style="@style/ImageLayout"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/universidadesenior"
+                            style="@style/ImageCaptionText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
+
+                        <ImageView
+                            android:src="@drawable/escolademusica"
+                            android:contentDescription="Image 3"
+                            style="@style/ImageLayout"
+                            android:layout_width="320dp"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/afc"
+                            style="@style/ImageCaptionText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
+
+                        <ImageView
+                            android:src="@drawable/eser"
+                            android:contentDescription="Image 3"
+                            style="@style/ImageLayout"
+                            android:layout_width="400dp"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/eser"
+                            style="@style/ImageCaptionText" />
+                    </LinearLayout>
                 </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <LinearLayout
+            android:id="@+id/horizontalScrollView7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView6"
+            style="@style/LinearLayoutScroll">
+
+            <TextView
+                android:text="@string/restaurantes"
+                style="@style/LinearLayoutTitle"/>
+
+            <HorizontalScrollView
+                style="@style/HorizontalScrollView">
 
                 <LinearLayout
-                    style="@style/ImageLinearLayout">
+                    style="@style/LinearLayoutImagens">
 
-                    <ImageView
-                        android:src="@drawable/pingodoce"
-                        android:contentDescription="Image 3"
-                        style="@style/ImageLayout"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
 
-                    <TextView
-                        android:text="@string/pindodoce"
-                        style="@style/ImageCaptionText" />
+                        <ImageView
+                            android:src="@drawable/trincanela"
+                            android:contentDescription="Image 1"
+                            style="@style/ImageLayout"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/trincanela"
+                            style="@style/ImageCaptionText" />
+
+                    </LinearLayout>
+
                 </LinearLayout>
-            </LinearLayout>
-        </HorizontalScrollView>
-    </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
 
-    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-    <LinearLayout
-        android:id="@+id/horizontalScrollView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView3"
-        style="@style/LinearLayoutScroll">
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <LinearLayout
+            android:id="@+id/horizontalScrollView8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView7"
+            style="@style/LinearLayoutScroll">
 
-        <TextView
-            android:text="@string/parques"
-            style="@style/LinearLayoutTitle"/>
+            <TextView
+                android:text="@string/lares"
+                style="@style/LinearLayoutTitle"/>
 
-        <HorizontalScrollView
-            style="@style/HorizontalScrollView">
-
-            <LinearLayout
-                style="@style/LinearLayoutImagens">
+            <HorizontalScrollView
+                style="@style/HorizontalScrollView">
 
                 <LinearLayout
-                    style="@style/ImageLinearLayout">
+                    style="@style/LinearLayoutImagens">
 
-                    <ImageView
-                        android:src="@drawable/jardimlocomotiva"
-                        android:contentDescription="Image 1"
-                        style="@style/ImageLayout"
-                        android:layout_width="370dp"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
 
-                    <TextView
-                        android:text="@string/jardimlocomotiva"
-                        style="@style/ImageCaptionText" />
+                        <ImageView
+                            android:src="@drawable/lar_eiro_gomes"
+                            android:contentDescription="Image 1"
+                            style="@style/ImageLayout"
+                            android:layout_width="250dp"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/largomes"
+                            style="@style/ImageCaptionText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
+
+                        <ImageView
+                            android:src="@drawable/larferroviarios"
+                            android:contentDescription="Image 1"
+                            style="@style/ImageLayout"
+                            android:layout_width="370dp"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/larferroviario"
+                            style="@style/ImageCaptionText" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <LinearLayout
+            android:id="@+id/horizontalScrollView9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView8"
+            style="@style/LinearLayoutScroll">
+
+            <TextView
+                android:text="@string/museu"
+                style="@style/LinearLayoutTitle"/>
+
+            <HorizontalScrollView
+                style="@style/HorizontalScrollView">
 
                 <LinearLayout
-                    style="@style/ImageLinearLayout">
+                    style="@style/LinearLayoutImagens">
 
-                    <ImageView
-                        android:src="@drawable/bonito"
-                        android:contentDescription="Image 2"
-                        style="@style/ImageLayout"
-                        android:layout_width="260dp"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
 
-                    <TextView
-                        android:text="@string/bonito"
-                        style="@style/ImageCaptionText" />
+                        <ImageView
+                            android:src="@drawable/museuferroviario"
+                            android:contentDescription="Image 1"
+                            style="@style/ImageLayout"
+                            android:layout_width="250dp"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/museuferroviario"
+                            style="@style/ImageCaptionText" />
+
+                    </LinearLayout>
+
                 </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <LinearLayout
+            android:id="@+id/horizontalScrollView10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView9"
+            style="@style/LinearLayoutScroll">
+
+            <TextView
+                android:text="@string/zonaindustrial"
+                style="@style/LinearLayoutTitle"/>
+
+            <HorizontalScrollView
+                style="@style/HorizontalScrollView">
 
                 <LinearLayout
-                    style="@style/ImageLinearLayout">
+                    style="@style/LinearLayoutImagens">
 
-                    <ImageView
-                        android:src="@drawable/jardimjose"
-                        android:contentDescription="Image 3"
-                        style="@style/ImageLayout"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
 
-                    <TextView
-                        android:text="@string/jardimjose"
-                        style="@style/ImageCaptionText" />
+                        <ImageView
+                            android:src="@drawable/zonaindustrial"
+                            android:contentDescription="Image 1"
+                            style="@style/ImageLayout"
+                            android:layout_width="250dp"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/zonaindustrial"
+                            style="@style/ImageCaptionText" />
+
+                    </LinearLayout>
+
                 </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <LinearLayout
+            android:id="@+id/horizontalScrollView11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView10"
+            style="@style/LinearLayoutScroll">
+
+            <TextView
+                android:text="@string/regimento"
+                style="@style/LinearLayoutTitle"/>
+
+            <HorizontalScrollView
+                style="@style/HorizontalScrollView">
 
                 <LinearLayout
-                    style="@style/ImageLinearLayout">
+                    style="@style/LinearLayoutImagens">
 
-                    <ImageView
-                        android:src="@drawable/jardimpertodaescola"
-                        android:contentDescription="Image 3"
-                        style="@style/ImageLayout"
-                        android:layout_width="320dp"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
 
-                    <TextView
-                        android:text="@string/jardimLCE"
-                        style="@style/ImageCaptionText" />
+                        <ImageView
+                            android:src="@drawable/regimento"
+                            android:contentDescription="Image 1"
+                            style="@style/ImageLayout"
+                            android:layout_width="320dp"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/regimento"
+                            style="@style/ImageCaptionText" />
+
+                    </LinearLayout>
+
                 </LinearLayout>
-            </LinearLayout>
-        </HorizontalScrollView>
-    </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
 
-    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-    <LinearLayout
-        android:id="@+id/horizontalScrollView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView4"
-        style="@style/LinearLayoutScroll">
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <LinearLayout
+            android:id="@+id/horizontalScrollView12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView11"
+            style="@style/LinearLayoutScroll">
 
-        <TextView
-            android:text="@string/desporto"
-            style="@style/LinearLayoutTitle"/>
+            <TextView
+                android:text="@string/parquenegocios"
+                style="@style/LinearLayoutTitle"/>
 
-        <HorizontalScrollView
-            style="@style/HorizontalScrollView">
-
-            <LinearLayout
-                style="@style/LinearLayoutImagens">
+            <HorizontalScrollView
+                style="@style/HorizontalScrollView">
 
                 <LinearLayout
-                    style="@style/ImageLinearLayout">
+                    style="@style/LinearLayoutImagens">
 
-                    <ImageView
-                        android:src="@drawable/radical"
-                        android:contentDescription="Image 1"
-                        style="@style/ImageLayout"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
 
-                    <TextView
-                        android:text="@string/parqueradical"
-                        style="@style/ImageCaptionText" />
+                        <ImageView
+                            android:src="@drawable/parquemepresarial"
+                            android:contentDescription="Image 1"
+                            style="@style/ImageLayout"
+                            android:layout_width="250dp"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
+
+                        <TextView
+                            android:text="@string/parquenegocios"
+                            style="@style/ImageCaptionText" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <LinearLayout
+            android:id="@+id/horizontalScrollView13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView12"
+            style="@style/LinearLayoutScroll">
+
+            <TextView
+                android:text="@string/igrejas"
+                style="@style/LinearLayoutTitle"/>
+
+            <HorizontalScrollView
+                style="@style/HorizontalScrollView">
 
                 <LinearLayout
-                    style="@style/ImageLinearLayout">
+                    style="@style/LinearLayoutImagens">
 
-                    <ImageView
-                        android:src="@drawable/piscinas"
-                        android:contentDescription="Image 2"
-                        style="@style/ImageLayout"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
+                    <LinearLayout
+                        style="@style/ImageLinearLayout">
 
-                    <TextView
-                        android:text="@string/piscinas"
-                        style="@style/ImageCaptionText" />
-                </LinearLayout>
+                        <ImageView
+                            android:src="@drawable/paroquia"
+                            android:contentDescription="Image 1"
+                            style="@style/ImageLayout"
+                            android:layout_width="270dp"
+                            android:background="@drawable/rounded_corners"
+                            android:clipToOutline="true"/>
 
-                <LinearLayout
-                    style="@style/ImageLinearLayout">
+                        <TextView
+                            android:text="@string/paroquia"
+                            style="@style/ImageCaptionText" />
 
-                    <ImageView
-                        android:src="@drawable/complexodesportivo"
-                        android:contentDescription="Image 3"
-                        style="@style/ImageLayout"
-                        android:layout_width="320dp"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
-
-                    <TextView
-                        android:text="@string/complexodesportivo"
-                        style="@style/ImageCaptionText" />
-                </LinearLayout>
-
-                <LinearLayout
-                    style="@style/ImageLinearLayout">
-
-                    <ImageView
-                        android:src="@drawable/pavilhao"
-                        android:contentDescription="Image 3"
-                        style="@style/ImageLayout"
-                        android:layout_width="320dp"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
-
-                    <TextView
-                        android:text="@string/pavilhao"
-                        style="@style/ImageCaptionText" />
-                </LinearLayout>
-
-                <LinearLayout
-                    style="@style/ImageLinearLayout">
-
-                    <ImageView
-                        android:src="@drawable/campoazul"
-                        android:contentDescription="Image 3"
-                        style="@style/ImageLayout"
-                        android:layout_width="300dp"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
-
-                    <TextView
-                        android:text="@string/campoazul"
-                        style="@style/ImageCaptionText" />
-                </LinearLayout>
-            </LinearLayout>
-        </HorizontalScrollView>
-    </LinearLayout>
-
-    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-    <LinearLayout
-        android:id="@+id/horizontalScrollView6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView5"
-        style="@style/LinearLayoutScroll">
-
-        <TextView
-            android:text="@string/escolas"
-            style="@style/LinearLayoutTitle"/>
-
-        <HorizontalScrollView
-            style="@style/HorizontalScrollView">
-
-            <LinearLayout
-                style="@style/LinearLayoutImagens">
-
-                <LinearLayout
-                    style="@style/ImageLinearLayout">
-
-                    <ImageView
-                        android:src="@drawable/secundaria"
-                        android:contentDescription="Image 1"
-                        style="@style/ImageLayout"
-                        android:layout_width="390dp"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
-
-                    <TextView
-                        android:text="@string/escolasecundaria"
-                        style="@style/ImageCaptionText" />
+                    </LinearLayout>
 
                 </LinearLayout>
-
-                <LinearLayout
-                    style="@style/ImageLinearLayout">
-
-                    <ImageView
-                        android:src="@drawable/colegioandrade"
-                        android:contentDescription="Image 2"
-                        style="@style/ImageLayout"
-                        android:layout_width="260dp"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
-
-                    <TextView
-                        android:text="@string/colegioandrade"
-                        style="@style/ImageCaptionText" />
-                </LinearLayout>
-
-                <LinearLayout
-                    style="@style/ImageLinearLayout">
-
-                    <ImageView
-                        android:src="@drawable/escoladobonito"
-                        android:contentDescription="Image 3"
-                        style="@style/ImageLayout"
-                        android:layout_width="260dp"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
-
-                    <TextView
-                        android:text="@string/escolabonito"
-                        style="@style/ImageCaptionText" />
-                </LinearLayout>
-
-                <LinearLayout
-                    style="@style/ImageLinearLayout">
-
-                    <ImageView
-                        android:src="@drawable/universidadesenior"
-                        android:contentDescription="Image 3"
-                        style="@style/ImageLayout"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
-
-                    <TextView
-                        android:text="@string/universidadesenior"
-                        style="@style/ImageCaptionText" />
-                </LinearLayout>
-
-                <LinearLayout
-                    style="@style/ImageLinearLayout">
-
-                    <ImageView
-                        android:src="@drawable/escolademusica"
-                        android:contentDescription="Image 3"
-                        style="@style/ImageLayout"
-                        android:layout_width="320dp"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
-
-                    <TextView
-                        android:text="@string/afc"
-                        style="@style/ImageCaptionText" />
-                </LinearLayout>
-
-                <LinearLayout
-                    style="@style/ImageLinearLayout">
-
-                    <ImageView
-                        android:src="@drawable/eser"
-                        android:contentDescription="Image 3"
-                        style="@style/ImageLayout"
-                        android:layout_width="400dp"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
-
-                    <TextView
-                        android:text="@string/eser"
-                        style="@style/ImageCaptionText" />
-                </LinearLayout>
-            </LinearLayout>
-        </HorizontalScrollView>
-    </LinearLayout>
-
-    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-    <LinearLayout
-        android:id="@+id/horizontalScrollView7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView6"
-        style="@style/LinearLayoutScroll">
-
-        <TextView
-            android:text="@string/restaurantes"
-            style="@style/LinearLayoutTitle"/>
-
-        <HorizontalScrollView
-            style="@style/HorizontalScrollView">
-
-            <LinearLayout
-                style="@style/LinearLayoutImagens">
-
-                <LinearLayout
-                    style="@style/ImageLinearLayout">
-
-                    <ImageView
-                        android:src="@drawable/trincanela"
-                        android:contentDescription="Image 1"
-                        style="@style/ImageLayout"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
-
-                    <TextView
-                        android:text="@string/trincanela"
-                        style="@style/ImageCaptionText" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-        </HorizontalScrollView>
-    </LinearLayout>
-
-    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-    <LinearLayout
-        android:id="@+id/horizontalScrollView8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView7"
-        style="@style/LinearLayoutScroll">
-
-        <TextView
-            android:text="@string/lares"
-            style="@style/LinearLayoutTitle"/>
-
-        <HorizontalScrollView
-            style="@style/HorizontalScrollView">
-
-            <LinearLayout
-                style="@style/LinearLayoutImagens">
-
-                <LinearLayout
-                    style="@style/ImageLinearLayout">
-
-                    <ImageView
-                        android:src="@drawable/lar_eiro_gomes"
-                        android:contentDescription="Image 1"
-                        style="@style/ImageLayout"
-                        android:layout_width="250dp"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
-
-                    <TextView
-                        android:text="@string/largomes"
-                        style="@style/ImageCaptionText" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    style="@style/ImageLinearLayout">
-
-                    <ImageView
-                        android:src="@drawable/larferroviarios"
-                        android:contentDescription="Image 1"
-                        style="@style/ImageLayout"
-                        android:layout_width="370dp"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
-
-                    <TextView
-                        android:text="@string/larferroviario"
-                        style="@style/ImageCaptionText" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-        </HorizontalScrollView>
-    </LinearLayout>
-
-    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-    <LinearLayout
-        android:id="@+id/horizontalScrollView9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView8"
-        style="@style/LinearLayoutScroll">
-
-        <TextView
-            android:text="@string/museu"
-            style="@style/LinearLayoutTitle"/>
-
-        <HorizontalScrollView
-            style="@style/HorizontalScrollView">
-
-            <LinearLayout
-                style="@style/LinearLayoutImagens">
-
-                <LinearLayout
-                    style="@style/ImageLinearLayout">
-
-                    <ImageView
-                        android:src="@drawable/museuferroviario"
-                        android:contentDescription="Image 1"
-                        style="@style/ImageLayout"
-                        android:layout_width="250dp"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
-
-                    <TextView
-                        android:text="@string/museuferroviario"
-                        style="@style/ImageCaptionText" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-        </HorizontalScrollView>
-    </LinearLayout>
-
-    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-    <LinearLayout
-        android:id="@+id/horizontalScrollView10"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView9"
-        style="@style/LinearLayoutScroll">
-
-        <TextView
-            android:text="@string/zonaindustrial"
-            style="@style/LinearLayoutTitle"/>
-
-        <HorizontalScrollView
-            style="@style/HorizontalScrollView">
-
-            <LinearLayout
-                style="@style/LinearLayoutImagens">
-
-                <LinearLayout
-                    style="@style/ImageLinearLayout">
-
-                    <ImageView
-                        android:src="@drawable/zonaindustrial"
-                        android:contentDescription="Image 1"
-                        style="@style/ImageLayout"
-                        android:layout_width="250dp"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
-
-                    <TextView
-                        android:text="@string/zonaindustrial"
-                        style="@style/ImageCaptionText" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-        </HorizontalScrollView>
-    </LinearLayout>
-
-    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-    <LinearLayout
-        android:id="@+id/horizontalScrollView11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView10"
-        style="@style/LinearLayoutScroll">
-
-        <TextView
-            android:text="@string/regimento"
-            style="@style/LinearLayoutTitle"/>
-
-        <HorizontalScrollView
-            style="@style/HorizontalScrollView">
-
-            <LinearLayout
-                style="@style/LinearLayoutImagens">
-
-                <LinearLayout
-                    style="@style/ImageLinearLayout">
-
-                    <ImageView
-                        android:src="@drawable/regimento"
-                        android:contentDescription="Image 1"
-                        style="@style/ImageLayout"
-                        android:layout_width="320dp"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
-
-                    <TextView
-                        android:text="@string/regimento"
-                        style="@style/ImageCaptionText" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-        </HorizontalScrollView>
-    </LinearLayout>
-
-    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-    <LinearLayout
-        android:id="@+id/horizontalScrollView12"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView11"
-        style="@style/LinearLayoutScroll">
-
-        <TextView
-            android:text="@string/parquenegocios"
-            style="@style/LinearLayoutTitle"/>
-
-        <HorizontalScrollView
-            style="@style/HorizontalScrollView">
-
-            <LinearLayout
-                style="@style/LinearLayoutImagens">
-
-                <LinearLayout
-                    style="@style/ImageLinearLayout">
-
-                    <ImageView
-                        android:src="@drawable/parquemepresarial"
-                        android:contentDescription="Image 1"
-                        style="@style/ImageLayout"
-                        android:layout_width="250dp"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
-
-                    <TextView
-                        android:text="@string/parquenegocios"
-                        style="@style/ImageCaptionText" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-        </HorizontalScrollView>
-    </LinearLayout>
-
-    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-    <LinearLayout
-        android:id="@+id/horizontalScrollView13"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView12"
-        style="@style/LinearLayoutScroll">
-
-        <TextView
-            android:text="@string/igrejas"
-            style="@style/LinearLayoutTitle"/>
-
-        <HorizontalScrollView
-            style="@style/HorizontalScrollView">
-
-            <LinearLayout
-                style="@style/LinearLayoutImagens">
-
-                <LinearLayout
-                    style="@style/ImageLinearLayout">
-
-                    <ImageView
-                        android:src="@drawable/paroquia"
-                        android:contentDescription="Image 1"
-                        style="@style/ImageLayout"
-                        android:layout_width="270dp"
-                        android:background="@drawable/rounded_corners"
-                        android:clipToOutline="true"/>
-
-                    <TextView
-                        android:text="@string/paroquia"
-                        style="@style/ImageCaptionText" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-        </HorizontalScrollView>
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

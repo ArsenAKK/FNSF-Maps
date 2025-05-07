@@ -1,5 +1,6 @@
 package com.example.fnsf_maps.ui.inicio
 
+import android.content.Intent // Import Intent for starting activities
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -20,6 +21,8 @@ class InicioFragment : Fragment() {
     ): View {
         _binding = FragmentInicioBinding.inflate(inflater, container, false)
         return binding.root
+
+
     }
 
     override fun onDestroyView() {
