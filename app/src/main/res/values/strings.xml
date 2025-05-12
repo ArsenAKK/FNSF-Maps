@@ -52,10 +52,10 @@
     <string name="edifInst">Edifícios Institucionais</string>
     <string name="saude">Saúde</string>
     <string name="zonascomercio">Zonas de Comércio</string>
-    <string name="parques">Parques / Jardins</string>
+    <string name="lazer">Lazer</string>
     <string name="desporto">Desporto / Atividade Física</string>
-    <string name="escolas">Escolas</string>
-    <string name="restaurantes">Restaurantes</string>
+    <string name="educacao">Educação</string>
+    <string name="restauracao">Restauração</string>
     <string name="lares">Lares</string>
     <string name="museu">Museu</string>
     <string name="zonaindustrial">Zona Industrial</string>

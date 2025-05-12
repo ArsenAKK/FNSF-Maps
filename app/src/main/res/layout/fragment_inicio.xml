@@ -16,40 +16,26 @@
         <!-- First child LinearLayout -->
         <LinearLayout
             android:id="@+id/layout_localidades"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:padding="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:background="?attr/selectableItemBackground"> <!-- Added gravity to center text -->
+            style="@style/LayoutLocalidadesCuriosidades">
             <!-- Add content for the first child LinearLayout here -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Localidades"/>
+                android:text="Localidades"
+                style="@style/TextoLocalidadesCuriosidades"/>
             <!-- Add content for the first child LinearLayout here -->
         </LinearLayout>
 
         <!-- Second child LinearLayout -->
         <LinearLayout
             android:id="@+id/layout_curiosidades"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:padding="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:background="?attr/selectableItemBackground"> <!-- Added gravity to center text -->
+            style="@style/LayoutLocalidadesCuriosidades">
             <!-- Add content for the first child LinearLayout here -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Curiosidades"/>
+                android:text="Curiosidades"
+                style="@style/TextoLocalidadesCuriosidades"/>
             <!-- Add content for the second child LinearLayout here -->
         </LinearLayout>
     </LinearLayout>
@@ -308,7 +294,7 @@
             style="@style/LinearLayoutScroll">
 
             <TextView
-                android:text="@string/parques"
+                android:text="@string/lazer"
                 style="@style/LinearLayoutTitle"/>
 
             <HorizontalScrollView
@@ -493,7 +479,7 @@
             style="@style/LinearLayoutScroll">
 
             <TextView
-                android:text="@string/escolas"
+                android:text="@string/educacao"
                 style="@style/LinearLayoutTitle"/>
 
             <HorizontalScrollView
@@ -610,7 +596,7 @@
             style="@style/LinearLayoutScroll">
 
             <TextView
-                android:text="@string/restaurantes"
+                android:text="@string/restauracao"
                 style="@style/LinearLayoutTitle"/>
 
             <HorizontalScrollView
